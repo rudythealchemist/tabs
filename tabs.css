@@ -1,0 +1,180 @@
+/* FONT FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap');
+
+/* Variables */
+:root {
+    --light-grey-: rgb(236, 236, 236);
+    --light-steel-blue: rgb(176, 196, 222);
+    --light-sky-blue: rgb(173, 216, 230);
+    --steel-blue: rgb(70, 130, 180);
+    --dodger-blue: rgb(30, 144, 255);
+    --white: rgb(255, 255, 255);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto',
+        sans-serif;
+    margin: 0 auto;
+    background: var(--light-grey-);
+}
+
+
+
+/* GLOBAL STYLES */
+img {
+    /* display: block; */
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+.about-img img {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.about-img {
+    margin-bottom: 2rem;
+}
+
+/* FONTS */
+h2,
+button,
+h4,
+li {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+li {
+    margin-top: 1rem;
+    list-style: none;
+    color: var(--light-steel-blue)
+}
+
+h2 {
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    margin-bottom: 2rem;
+}
+
+p {
+    line-height: 1.4rem;
+    padding: 1rem;
+    color: var(--gray);
+}
+
+/* section */
+.section {
+    padding: 5rem 0;
+}
+
+/*.title*/
+.title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+
+.about {
+    background: var(--white);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.about-content {
+    padding: 2rem;
+}
+
+/* button container */
+.btn-container {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tab-btn {
+    background: var(--light-sky-blue);
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    display: block;
+    cursor: pointer;
+    transition: ease-in-out 0.40s;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab-btn:hover {
+    background: var(--dodger-blue);
+    color: var(--light-steel-blue);
+}
+
+/* when button is active after click */
+.tab-btn:active {
+    background: white;
+
+}
+
+.tab-btn:after {
+    background: none;
+}
+
+/* hide-content */
+.content {
+    display: none;
+}
+
+.tab-btn.active {
+    background: var(--white);
+    color: var(--steel-blue)
+}
+
+/* disp block takes up entre width of element */
+.content.active {
+    display: block;
+}
+
+/* SCREENS > 992PX */
+@media screen and (min-width:992px) {
+    .section-center {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        margin: 0 auto;
+        width: 90vw;
+    }
+
+}
+
+
+/* SCREENS < 992X */
+
+@media screen and (max-width:992px) {
+    .section-center {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1rem;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    h2 {
+        line-height: 1rem;
+    }
+}
